@@ -18,12 +18,14 @@ function App() {
 </Navbar>
       </header>
       <main>
-    
+    <Container>
         <Routes>
           <Route path="/product/:slug" element={<ProductScreen/>}/>
           <Route path="/" element={<HomeScreen/>}/>
-        </Routes>    
+        </Routes>  
+        </Container>  
       </main>
+
       <footer>
           <div className='text-center'>All rights reserved</div>
         </footer>
