@@ -41,7 +41,12 @@ function HomeScreen() {
     <div>
       <h1>Featured Products</h1>
       <div className="products">
-        {products.map((product) => (
+        {
+          loading?<div>Loading...</div>
+          :
+          error?<div>{error}</div>
+          :
+        products.map((product) => (
           <div className="product" key={product.slug}>
             <Link to={`/product/${product.slug}`}>
               <img src={product.image} alt={product.name} />
