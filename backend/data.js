@@ -10,7 +10,7 @@ const data = {
             brand:'Nike',
             rating:4.5,
             numReviews:10,
-            description:'high quality shirt',
+            description:'High Quality Shirt',
 
         },
         {
@@ -19,11 +19,11 @@ const data = {
             caregory:'Shirts',
             image:'/images/p2.jpg',
             price: 250,
-            countInStock: 200,
+            countInStock: 0,
             brand:'Adidas',
             rating:4.0,
             numReviews:10,
-            description:'high quality shirt',
+            description:'High Quality Shirt',
 
         },
         {
@@ -36,7 +36,7 @@ const data = {
             brand:'Nike',
             rating:4.5,
             numReviews:14,
-            description:'high quality product',
+            description:'High Quality Product',
 
         },
         {
@@ -49,7 +49,7 @@ const data = {
             brand:'Puma',
             rating:4.5,
             numReviews:10,
-            description:'high quality product',
+            description:'High Quality Product',
 
         },
     ],

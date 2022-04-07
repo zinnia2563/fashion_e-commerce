@@ -1,8 +1,10 @@
 import { useEffect, useReducer,useState} from 'react';
 import axios from 'axios';
+import logger from 'use-reducer-logger';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Product from '../components/Product';
+import { Helmet } from 'react-helmet-async';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -17,7 +19,7 @@ const reducer = (state, action) => {
   }
 };
 function HomeScreen() {
-  const [{ loading, error, products }, dispatch] = useReducer(reducer, {
+  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
     products:[],
     loading: true,
     error: '',
@@ -41,6 +43,10 @@ function HomeScreen() {
 
   return (
     <div>
+      <Helmet>
+        <title>Fashion</title>
+      </Helmet>
+
       <h1>Featured Products</h1>
       <div className="products">
         {
